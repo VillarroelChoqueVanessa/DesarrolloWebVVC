@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pila con PHP y Sesiones</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:lightgray;
+            padding: 20px;
+        }
+        
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            width: 200px;
+        }
+        h1{
+            color:white;
+        }
+        button {
+            background-color:turquoise;
+            color:white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(40, 97, 91);
+        }
+        .container {
+            background-color:teal;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario</h1>
+        <form action="pila.php" method="post">
+            <label>Ingrese un elemento:</label>
+            <input type="number" name="elemento"><br>
+            <button type="submit" name="accion" value="insertar">Insertar</button>
+        </form>
+        <form action="pila.php" method="post">
+            <button type="submit" name="accion" value="eliminar">Eliminar</button>
+        </form>
+        <form action="pila.php" method="post">
+            <button type="submit" name="accion" value="mostrar">Mostrar</button>
+        </form>
+        <form action="pila.php" method="post">
+            <button type="submit" name="accion" value="salir">Salir</button>
+        </form>
+    </div>
+</body>
+</html>
