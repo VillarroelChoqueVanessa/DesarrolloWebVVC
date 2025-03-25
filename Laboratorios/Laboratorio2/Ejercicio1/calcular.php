@@ -58,6 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         ?>
     </div>
-    <p><a href="index.php">Volver al formulario</a></p>
+    <p><a href="formulario.html">Volver al formulario</a></p>
 </body>
 </html>
