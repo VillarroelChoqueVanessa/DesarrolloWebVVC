@@ -1,5 +1,5 @@
 <?php
-// Obtener el número de palabras desde el formulario anterior
+
 $numero_palabras = isset($_POST['numero_palabras']) ? (int)$_POST['numero_palabras'] : 0;
 ?>
 
