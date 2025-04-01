@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    padding: 15px;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #cc0000;
+    color: white;
+    cursor: pointer;
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+}
+
+tr:nth-child(even) {
+    background-color: #ffff99;
+}
+
+.edit-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 500px;
+}
+
+.button {
+    background-color: #006699;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #006699;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    width: 250px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
