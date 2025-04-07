@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    padding: 15px;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #002060;
+    color: white;
+}
+
+td{
+    background-color:#DBE5F1 ;
+}
+th a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+input {
+    padding: 5px;
+    margin: 5px;
+    width: 250px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
