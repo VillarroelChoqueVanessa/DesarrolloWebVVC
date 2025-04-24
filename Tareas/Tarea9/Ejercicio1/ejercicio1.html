@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparador de Números</title>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        input {
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>Número A:</label>
+        <input type="number" id="numeroA">
+        
+        <label>Número B:</label>
+        <input type="number" id="numeroB">
+        
+        <button onclick="comparar()">Comparar</button>
+        
+        <div id="resultado">Resultado aquí</div>
+    </div>
+
+    <script>
+        function comparar() {
+            let a = parseFloat(document.getElementById('numeroA').value);
+            let b = parseFloat(document.getElementById('numeroB').value);
+            let resultado = document.getElementById('resultado');
+            
+            if (a > b) {
+                resultado.style.backgroundColor = 'green';
+                resultado.style.color = 'white';
+                resultado.textContent = 'A > B';
+            } else if (b > a) {
+                resultado.style.backgroundColor = 'blue';
+                resultado.style.color = 'white';
+                resultado.textContent = 'B > A';
+            } else {
+                resultado.style.backgroundColor = 'gray';
+                resultado.style.color = 'white';
+                resultado.textContent = 'A = B';
+            }
+        }
+    </script>
+</body>
+</html>
