@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 3 - Libro</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        class Libro {
+            constructor(titulo, autor, editorial, anio) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.editorial = editorial;
+                this.anio = anio;
+            }
+
+            mostrar() {
+                document.write(`
+                    <h2>Datos del Libro</h2>
+                    <p>Título: ${this.titulo}</p>
+                    <p>Autor: ${this.autor}</p>
+                    <p>Editorial: ${this.editorial}</p>
+                    <p>Año: ${this.anio}</p>
+                `);
+            }
+        }
+
+        let titulo = prompt("Ingrese el título del libro:");
+        let autor = prompt("Ingrese el autor del libro:");
+        let editorial = prompt("Ingrese la editorial:");
+        let anio = prompt("Ingrese el año:");
+
+        let libro = new Libro(titulo, autor, editorial, anio);
+        libro.mostrar();
+    </script>
+</body>
+</html>

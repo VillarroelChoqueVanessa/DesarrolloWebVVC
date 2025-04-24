@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2 - Números Pares</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let numeros = [];
+        
+        for(let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+            numeros.push(numero);
+        }
+        
+        let cantidadPares = numeros.filter(num => num % 2 === 0).length;
+        
+        document.write(`La cantidad de números pares en el arreglo es: ${cantidadPares}`);
+    </script>
+</body>
+</html>

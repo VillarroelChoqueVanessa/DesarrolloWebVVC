@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 1 - Palíndromo</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function esPalindromo(texto) {
+            let textoLimpio = texto.toLowerCase().replace(/[^a-z0-9]/g, '');
+            let textoReverso = textoLimpio.split('').reverse().join('');
+            return textoLimpio === textoReverso;
+        }
+
+        let texto = prompt("Ingrese un texto para verificar si es palíndromo:");
+        let resultado = esPalindromo(texto) ? "Es un palíndromo" : "No es un palíndromo";
+        document.write(resultado);
+    </script>
+</body>
+</html>
