@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CRUD con Fetch API</h1>
+    
+    <div class="menu">
+        <a href="#" onclick="mostrarFormulario()">Crear</a>
+        <a href="#" onclick="cargarContenido()">Listar</a>
+    </div>
+
+    <div id="formulario" style="display: none;">
+        <form id="formInsertar" onsubmit="crear(event)">
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <input type="radio" name="sexo" value="M" required> Masculino
+                    <input type="radio" name="sexo" value="F" required> Femenino
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+     <div id="contenido" style="display: none;"></div>
+
+    <script src="apifetch.js"></script>
+</body>
+</html>
