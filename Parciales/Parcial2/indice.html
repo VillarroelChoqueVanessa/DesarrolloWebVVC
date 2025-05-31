@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño Web</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="principal" onclick="mostarhistorial()">
+        <nav class="barra" id="barra" >
+            <div class="boton" id="boton"><button onclick="cargar()">Inicio</button></div>
+            <div class="boton" id="boton"><button><a href="javascript:cargarContenido('galeria.php')">Pregunta 1</a></button></div>
+            <div class="boton" id="boton"><button><a href="javascript:cargarContenido('color.html')">Pregunta 2</a></button> </div>
+            <div class="boton" id="boton"><button><a href="javascript:cargarContenido('formlogin.html')">Pregunta 3</a></button></div>
+            <div class="boton" id="boton"><button><a href="javascript:cargarContenido('listar.php')">Pregunta 4</a></button></div>
+            <div id="menu"><button onclick="mostrarboton()" >Menu</button></div>
+        </nav>
+        <div id="contenido" >
+            
+        <h1>Segundo Examen Parcial de SIS-256</h1>
+            <p>Nombre Estudiante: <span></span> </p>
+            <p>CU: <span></span> </p>
+            <p>Fecha: <span></span> </p>
+            <p>Numero Visitas: <span></span> </p>
+        </div>
+        <div id="historial" >
+        </div>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
