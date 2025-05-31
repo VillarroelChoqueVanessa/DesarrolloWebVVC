@@ -1,0 +1,99 @@
+body{
+    background-color:white;
+    padding: 20px;
+ 
+    
+}
+.contenido{
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    background-color: blue;
+    
+}
+.mizq{
+    width: 100px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+}
+
+.mizq button{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+#contenido{
+    background-color: white;
+    width: 700px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+img{
+    width: 35px;
+    height: 35px;
+}
+#mensaje{
+    
+    background-color:blue;
+    width: 702px;
+    height: 48px;
+    color: white;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    cursor: pointer;
+    
+}
+.conte input{
+    width: 30px;
+    height: 15px;
+}
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+.conte{
+    background-color:aquamarine;
+    padding: 25px;
+    margin: 10px;
+}
+.conte button{
+    text-align: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px; 
+    background-color: lightseagreen;
+}
+
+ .conte button:hover{
+    background-color: darkseagreen;
+    color: white;
+}
+td{
+    padding: 5px 10px;
+    border: 2px solid #357fb0;
+    text-align: center;
+}

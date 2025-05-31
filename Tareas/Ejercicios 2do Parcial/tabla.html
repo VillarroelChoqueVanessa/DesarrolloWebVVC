@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="conte">
+        <label for="numero">Tabla</label>
+        <input type="number" id="numero">
+        <input type="radio" name="operacion" id="operacion_suma" value="suma">Suma
+        <input type="radio" name="operacion" id="operacion_resta" value="resta">Resta
+        <input type="radio" name="operacion" id="operacion_multiplicacion" value="multiplicacion">Multiplicacion
+        <input type="radio" name="operacion" id="operacion_division" value="division">Division
+
+        <label for="hasta">Hasta</label>
+        <input type="number" id="hasta">
+        <button id="btncalcular">Calcular</button>
+    </div>
+    <div id="resultado"></div>
+    <script>
+        document.getElementById("btncalcular").addEventListener("click" , () =>{
+            let numero=parseInt(document.getElementById("numero").value);
+            let hasta=parseInt(document.getElementById("hasta").value);
+            if(numero>10){
+                alert("El numero debe ser menor o igual a 10");
+                return;
+            }
+            if(hasta <1){
+                alert("El valor de 'hasta' debe ser mayor o igual a 1");
+                return;
+            }
+            let operacion=document.querySelector('input[name="operacion"]:checked').value;
+            let resultado=document.getElementById("resultado");
+            let tabla='<table>';
+                for(let i=1;i<=hasta;i++){
+                    tabla+='<tr>';
+                        switch(operacion){
+                            case 'suma':
+                            tabla+=`<td>${i}</td><td>+</td><td>${numero}</td><td>=</td><td>${i+numero}</td>`;
+                            break;
+                            case 'resta':
+                                tabla+=`<td>${i}</td><td>-</td><td>${numero}</td><td>=</td><td>${i-numero}</td>`;
+                                break;
+                                case 'multiplicacion':
+                                    tabla+=`<td>${i}</td><td>×</td><td>${numero}</td><td>=</td><td>${i*numero}</td>`;
+                                    break;
+                            case 'division':
+                            if(numero!==0){
+                                tabla += `<td>${i}</td><td>÷</td><td>${numero}</td><td>=</td><td>${(i / numero).toFixed(2)}</td>`;
+                            }else{
+                                tabla+=`<td colspan="5">No se puede dividir por cero</td>`;
+                            }
+                            break;
+                        }
+                        tabla+='</tr>';
+                }
+            tabla+='</table>';
+        
+            resultado.innerHTML=tabla;
+        });
+    </script>
+</body>
+</html>
